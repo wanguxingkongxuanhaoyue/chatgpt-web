@@ -191,10 +191,10 @@ pnpm dev
 docker build -t chatgpt-web .
 
 # 前台运行
-docker run --name chatgpt-web --rm -it -p 3002:3002 --env OPENAI_API_KEY=your_api_key chatgpt-web
+docker run --name chatgpt-web --rm -it -p 3002:3002 --env OPENAI_API_KEY=$OPENAI_API_KEY chatgpt-web
 
 # 后台运行
-docker run --name chatgpt-web -d -p 3002:3002 --env OPENAI_API_KEY=your_api_key chatgpt-web
+docker run --name chatgpt-web -d -p 3002:3002 --env OPENAI_API_KEY=$OPENAI_API_KEY chatgpt-web
 
 # 运行地址
 http://localhost:3002/
